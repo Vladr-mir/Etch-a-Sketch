@@ -1,0 +1,20 @@
+body {
+  justify-content: center;
+  height: 100vh;
+  display: flex;
+}
+
+.sketch-area {
+  align-self: center;
+  border: 1px solid black;
+  width: 550px;
+  height: 550px;
+  display: flex;
+}
+
+.sketch-area div {
+  border: 2px solid blue;
+  display: flex;
+  flex: auto;
+  flex-direction: column;
+}
