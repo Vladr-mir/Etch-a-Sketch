@@ -1,11 +1,27 @@
-function addPixels(dimension) {
-  const sketchArea = document.querySelector('div.sketch-area');
+function paintOnClick(color='black') {
+  const pixels = document.querySelectorAll('.pixel');
+  pixels.forEach(pixel => {
+    pixel.addEventListener('mouseover', (e) => {
+      if (e.buttons == 1) {
+        e.preventDefault();
+        pixel.style.backgroundColor = color;
+      }
+    });
+    
+  });
+}
 
-  for (i = 0; i < dimension; i++) {
-    const column = document.createElement('div');
-    for (j = 0; j < dimension; j++) {
-      const row = document.createElement('div');
-      column.appendChild(row);
+function addPixels(dimensions) {
+  const sketchArea = document.querySelector('div.sketch-area');
+  let column;
+  let pixel;
+
+  for (i = 0; i < dimensions; i++) {
+    column = document.createElement('div');
+    for (j = 0; j < dimensions; j++) {
+      pixel = document.createElement('div');
+      pixel.classList.add('pixel');
+      column.appendChild(pixel);
     }
     sketchArea.appendChild(column);
   }

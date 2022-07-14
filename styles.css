@@ -13,8 +13,16 @@ body {
 }
 
 .sketch-area div {
-  border: 2px solid blue;
+  /*border: 1px solid blue;*/
   display: flex;
   flex: auto;
   flex-direction: column;
+}
+
+/*.pixel:hover {*/
+  /*background-color: black;*/
+/*}*/
+
+.clicked {
+  background-color: black;
 }
