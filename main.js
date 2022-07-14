@@ -1,9 +1,23 @@
-function paintOnClick(color='black') {
+let color = 'black';
+addPixels(100);
+preventDrag();
+pickColor();
+paintOnClick();
+
+function paintOnClick() {
   const pixels = document.querySelectorAll('.pixel');
   pixels.forEach(pixel => {
     pixel.addEventListener('mouseover', (e) => {
       if (e.buttons > 0) pixel.style.backgroundColor = color; 
     });
+  });
+}
+
+function pickColor() {
+  const colorPicker = document.querySelector('#colorpicker');
+
+  colorPicker.addEventListener('change', (e) => {
+    color = e.target.value;
   });
 }
 

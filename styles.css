@@ -5,8 +5,10 @@ body {
 }
 
 .sketch-area {
+  border-radius: 5px;
+  box-shadow: 0px 2px 15px 0px black;
   align-self: center;
-  border: 1px solid black;
+  /*border: 1px solid black;*/
   width: 550px;
   height: 550px;
   display: flex;
