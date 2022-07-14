@@ -2,12 +2,8 @@ function paintOnClick(color='black') {
   const pixels = document.querySelectorAll('.pixel');
   pixels.forEach(pixel => {
     pixel.addEventListener('mouseover', (e) => {
-      if (e.buttons == 1) {
-        e.preventDefault();
-        pixel.style.backgroundColor = color;
-      }
+      if (e.buttons > 0) pixel.style.backgroundColor = color; 
     });
-    
   });
 }
 
@@ -27,3 +23,10 @@ function addPixels(dimensions) {
   }
 }
 
+function preventDrag() {
+  const divs = document.querySelectorAll('div');
+  divs.forEach(div => {
+    div.addEventListener('dragstart', (e) => e.preventDefault());
+    div.addEventListener('drop', (e) => e.preventDefault());
+  });
+}
