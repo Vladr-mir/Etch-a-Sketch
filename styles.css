@@ -23,7 +23,7 @@ button:hover {
   background-color: #ef2a4f;
 }
 
-button.pressed {
+.pressed {
   background-color: #8f0f32;
 }
 

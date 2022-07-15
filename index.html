@@ -11,14 +11,14 @@
 <body>
   <div class="control-panel">
     <input type="color" id="colorpicker" value="#bb1f3c" />
-    <button class="pressed">Color Picker</button>
-    <button>Eraser</button>
-    <button>Ink</button>
-    <button>Random</button>
-    <button>Reset</button>
+    <button data-mode="c" class="pressed color-mode">Color Picker</button>
+    <button data-mode="e" class="color-mode">Eraser</button>
+    <button data-mode="i" class="color-mode">Ink</button>
+    <button data-mode="r" class="color-mode">Random</button>
+    <button id="reset">Reset</button>
 
     <div class="slider">
-      <button>Change size</button>
+      <button id="reset-size">Change size</button>
       <input type="range" min="4" max="100" value="64" id="canvas-size">
       <div id="range-value">64</div>
     </div>
