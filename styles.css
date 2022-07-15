@@ -7,6 +7,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 button {
@@ -55,9 +56,38 @@ button.pressed {
   justify-content: space-around;
 }
 
+.slider {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#range-value {
+  background-color: #bb1f3c;
+  font-size: 15px;
+  color: white;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 0px 15px;
+  display: inline-block;
+}
+
+#canvas-size {
+  accent-color: #bb1f3c;
+}
+
 #colorpicker {
-  border: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 100px;
+  height: 100px;
+  border: none;
+  background-color: transparent;
   cursor: pointer;
-  padding: 0;
+}
+
+#colorpicker::-webkit-color-swatch {
+  border-radius: 15px;
+  border: none;
   box-shadow: 0px 2px 15px 0px grey;
 }

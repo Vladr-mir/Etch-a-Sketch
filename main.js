@@ -2,10 +2,16 @@
 // 'e' = erase
 // 'i' = ink/black
 // 'c' = color Picker
+// 'r' = rainbow
 let color = document.querySelector('#colorpicker').value;
 let colorMode = 'c';
-
-addPixels(64);
+let canvasSize = 64;
+const sliderLabel = document.querySelector('#range-value');
+const slider = document.querySelector('#canvas-size');
+slider.addEventListener('input', () => {
+  sliderLabel.textContent = slider.value;
+})
+addPixels(canvasSize);
 preventDrag();
 pickColor();
 paintOnClick();

@@ -10,17 +10,17 @@
 </head>
 <body>
   <div class="control-panel">
-    <input type="color" id="colorpicker" />
+    <input type="color" id="colorpicker" value="#bb1f3c" />
     <button class="pressed">Color Picker</button>
     <button>Eraser</button>
-    <button>Black</button>
+    <button>Ink</button>
     <button>Random</button>
     <button>Reset</button>
 
-    <div>
+    <div class="slider">
       <button>Change size</button>
-      <p id="range-value"></p>
       <input type="range" min="4" max="100" value="64" id="canvas-size">
+      <div id="range-value">64</div>
     </div>
   </div>
   <div class="sketch-area"></div>
