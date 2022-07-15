@@ -1,13 +1,34 @@
+* {
+  font-family: 'cascadia code', sans-serif;
+}
+
 body {
-  justify-content: center;
   height: 100vh;
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  transition: all 0.25s;
+  background-color: #bb1f3c;
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  border: none;
+}
+
+button:hover {
+  background-color: #ef2a4f;
+}
+
+button.pressed {
+  background-color: #8f0f32;
 }
 
 .sketch-area {
-  border-radius: 5px;
-  box-shadow: 0px 2px 15px 0px black;
-  align-self: center;
+  /*border-radius: 5px;*/
+  box-shadow: 0px 2px 15px 0px grey;
   /*border: 1px solid black;*/
   width: 550px;
   height: 550px;
@@ -21,10 +42,22 @@ body {
   flex-direction: column;
 }
 
-/*.pixel:hover {*/
-  /*background-color: black;*/
-/*}*/
+.control-panel {
+  margin: 50px;
+  padding: 20px;
+  width: 200px;
+  height: 500px;
+  background-color: lightgrey;
+  border-radius: 5px;
+  box-shadow: 0px 2px 15px 0px grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
 
-.clicked {
-  background-color: black;
+#colorpicker {
+  border: 0;
+  cursor: pointer;
+  padding: 0;
+  box-shadow: 0px 2px 15px 0px grey;
 }

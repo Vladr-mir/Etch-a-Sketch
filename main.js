@@ -1,5 +1,11 @@
-let color = 'black';
-addPixels(100);
+// colorModes: 
+// 'e' = erase
+// 'i' = ink/black
+// 'c' = color Picker
+let color = document.querySelector('#colorpicker').value;
+let colorMode = 'c';
+
+addPixels(64);
 preventDrag();
 pickColor();
 paintOnClick();
