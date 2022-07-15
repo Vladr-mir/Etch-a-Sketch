@@ -16,6 +16,9 @@ const changeSize = document.querySelector('#reset-size');
 addPixels(canvasSize);
 pickColor();
 
+resetBtn.addEventListener('click', () => resetCanvas());
+changeSize.addEventListener('click', () => resetCanvas(canvasSize));
+
 slider.addEventListener('input', () => {
   sliderLabel.textContent = slider.value;
   canvasSize = parseInt(slider.value);
@@ -28,14 +31,6 @@ colorModeBtn.forEach(btn => {
     colorMode = btn.dataset.mode;
   });
 });
-
-resetBtn.addEventListener('click', () => {
-  resetCanvas();
-});
-
-changeSize.addEventListener('click', () => {
-  resetCanvas(canvasSize);
-})
 
 function removePressedClass() {
   colorModeBtn.forEach(btn => btn.classList.remove('pressed'));
